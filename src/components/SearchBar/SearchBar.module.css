@@ -1,0 +1,47 @@
+.inputQuery {
+    height: 35px;
+    border-radius: 8px;
+    width: auto;
+    border-color: #0b0b0c;
+    transition: border-color 0.25s;
+
+    &:hover,
+    &:focus {
+        border-color: #646cff;
+    }
+}
+
+.formSearch,
+.light,
+.dark {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.light {
+    background-image: url(./light-eyes-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 15px;
+    height: 100px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: start;
+}
+
+.dark {
+    background-image: url(./dark-eyes-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 15px;
+    height: 100px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: start;
+}

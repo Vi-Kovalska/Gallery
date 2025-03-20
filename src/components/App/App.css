@@ -1,0 +1,15 @@
+#root {
+    max-width: 1800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.light {
+    background-color: rgb(226, 226, 226);
+    height: 100%;
+}
+
+.dark {
+    background-color: #0e0d0d;
+    height: 100%;
+}
