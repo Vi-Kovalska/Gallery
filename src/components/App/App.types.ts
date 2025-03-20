@@ -24,12 +24,12 @@ export type ModalImageData = {
 
 export type PropsImageGallery = {
     images: ImageData[],
-    openModal: OpenModal
+    openModal: (args: ImageData) => void;
 }
 
 export type PropsImageCard = {
     data: ImageData,
-} & OpenModal;
+openModal: (args: ImageData) => void;}
 
 export type PropsImageModal = {
     image: ModalImageData,
@@ -64,15 +64,8 @@ export type Data = {
       total: number,
       total_pages: number
     }
-// export type ImageResponse = {
-//   total: number;
-//   total_pages: number;
-//   results: Array<{
-//     id: string;
-//     urls: {
-//       small: string;
-//       regular: string;
-//     };
-//     alt_description: string;
-//   }>;
-// };
+export type PropsLoadMoreBTN = {
+  changePage: ()=> void,
+  disabled: boolean,
+  children: React.ReactNode,
+}

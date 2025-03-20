@@ -10,7 +10,6 @@ export const fetchImagesFromAPI = async ({query, page}: PropsFetchImagesFromAPI)
     const response = await axios.get<Data>(
     `https://api.unsplash.com/search/photos?query=${query}&page=${page}`
     );
-    console.log(response.data);
   
   return  response.data;
   } catch (error: unknown) {

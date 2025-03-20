@@ -84,16 +84,16 @@ if (context === undefined) {
 if (page >= totalPages) {
            return toast.error('Out of articles!');
           }
-        return setPage(prev => prev + 1)
+         setPage(prev => prev + 1)
   }
   // Modal region
   const [modalIsOpen, setModalIsOpen] = useState <boolean>(false);
   const [dataForModalImg, setDataForModalImg] = useState <ModalImageData | null>(null);
 
-  const openModal = ({ id, alt_description, urls, created_at }: ImageData): void => {
+  const openModal = ({ id, alt_description, urls: {regular}, created_at }: ImageData): void => {
     setModalIsOpen(true);
     
-    setDataForModalImg({ id, regular: urls.regular, alt_description, created_at });
+    setDataForModalImg({ id, regular, alt_description, created_at });
   }
  
   const closeModal =(): void=> {
@@ -111,7 +111,7 @@ if (page >= totalPages) {
        <div className={clsx(theme === 'light' ? 'light' : 'dark')}>
       <SearchBar onSubmit={onSubmit} />
         {collection.length > 0 && <ImageGallery images={collection} openModal={openModal} />}
-        {modalIsOpen && dataForModalImg && <ImageModal modalIsOpen={modalIsOpen} closeModal={closeModal} handleBackdrop={handleBackdrop} image={dataForModalImg} openModal={openModal}  />}
+        {modalIsOpen && dataForModalImg && <ImageModal modalIsOpen={modalIsOpen} closeModal={closeModal} handleBackdrop={handleBackdrop} image={dataForModalImg} />}
      {isLoad && <Loader />}
       {isError && <ErrorMessage errorMess={errorMess} />}
         {collection.length > 0 && <LoadMoreBTN changePage={changePage} disabled={isLoad}>Load more</LoadMoreBTN>}
