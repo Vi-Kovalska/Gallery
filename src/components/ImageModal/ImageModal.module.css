@@ -1,0 +1,10 @@
+.imgModal{
+    width: 320px;
+    height: 400px;
+}
+@media (min-width: 768px) {
+    .imgModal{
+        width: auto;
+        height: 500px;
+    }
+}

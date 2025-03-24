@@ -15,9 +15,9 @@ export const ImageModal = ({ image, modalIsOpen, closeModal, handleBackdrop }: P
             top: '50%',
             left: '50%',
             right: 'auto',
-            bottom: 'auto',
+        bottom: 'auto',
             marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
+        transform: 'translate(-50%, -50%)',
         },
         overlay: {
         position: 'fixed',
@@ -35,7 +35,7 @@ export const ImageModal = ({ image, modalIsOpen, closeModal, handleBackdrop }: P
                 onRequestClose={closeModal}
                 style={customStyles}
             contentLabel="Gallery's card">
-                <img key={`${id}${crypto.randomUUID()}`} src={regular} alt={alt_description}/>
+                <img key={`${id}${crypto.randomUUID()}`} src={regular} alt={alt_description} className={s.imgModal} />
             </Modal>
         </div>
     )

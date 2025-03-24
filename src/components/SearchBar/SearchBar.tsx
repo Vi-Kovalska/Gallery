@@ -16,10 +16,10 @@ if (context === undefined) {
 
   return (
     <header className={s[clsx(theme === 'light' ? 'light' : 'dark')]}>
-      <button onClick={toggleTheme}>{theme}</button>
+      <button onClick={toggleTheme} className={s.btnHeader}>{theme}</button>
       <form onSubmit={onSubmit} className={s.formSearch}>       
         <input className={s.inputQuery} name='query'  type="text" autoComplete="off" autoFocus placeholder="Search images and photos" />
-         <button type="submit">Search</button>
+         <button type="submit" className={s.btnHeader}>Search</button>
       </form>
       </header>
   )
