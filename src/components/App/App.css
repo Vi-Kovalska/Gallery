@@ -8,13 +8,16 @@
     background-color: rgb(226, 226, 226);
     height: 100%;
     width: 320px;
+    padding-bottom: 15px;
 }
 
 .dark {
     background-color: #0e0d0d;
     height: 100%;
     width: 320px;
+    padding-bottom: 15px;
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .dark,
         .light {
