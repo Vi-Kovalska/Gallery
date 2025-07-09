@@ -68,4 +68,5 @@ export type PropsLoadMoreBTN = {
   changePage: ()=> void,
   disabled: boolean,
   children: React.ReactNode,
+  className?: string,
 }

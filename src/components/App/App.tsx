@@ -105,7 +105,6 @@ if (page >= totalPages) {
           closeModal();
       }   
     }
-    
   return (
     <>
        <div className={clsx(theme === 'light' ? 'light' : 'dark')}>
@@ -114,7 +113,7 @@ if (page >= totalPages) {
         {modalIsOpen && dataForModalImg && <ImageModal modalIsOpen={modalIsOpen} closeModal={closeModal} handleBackdrop={handleBackdrop} image={dataForModalImg} />}
      {isLoad && <Loader />}
       {isError && <ErrorMessage errorMess={errorMess} />}
-        {collection.length > 0 && <LoadMoreBTN changePage={changePage} disabled={isLoad}>Load more</LoadMoreBTN>}
+        {collection.length > 0 && !isLoad && <LoadMoreBTN changePage={changePage} disabled={isLoad}>Load more</LoadMoreBTN>}
       </div>
     </>
   )

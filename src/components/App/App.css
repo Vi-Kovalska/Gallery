@@ -7,9 +7,22 @@
 .light {
     background-color: rgb(226, 226, 226);
     height: 100%;
+    width: 320px;
 }
 
 .dark {
     background-color: #0e0d0d;
     height: 100%;
+    width: 320px;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .dark,
+        .light {
+        min-width: 768px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .dark, .light {
+        min-width: 1025px;
+    }}

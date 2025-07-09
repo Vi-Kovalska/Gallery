@@ -2,7 +2,7 @@ Project name
 - Gallery
 
 Description
-- This web-application for searching images, viewing them in high quality in a modal window.
+- This web-application for searching images, viewing them in high quality in a modal window. Click on the image to see it in large size!
 
 Main technologies
 - Project on React working in Vite with HMR and some ESLint rules.
